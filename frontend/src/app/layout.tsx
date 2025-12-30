@@ -53,6 +53,7 @@ export default function RootLayout({
           </main>
           <footer className="py-20 text-center opacity-50 font-medium">
             &copy; {new Date().getFullYear()} GiveCampus Engineering. Lead with curiosity.
+          <div className="text-md">Korakot Leemakdej interview app</div>
           </footer>
         </GclProvider>
       </body>
