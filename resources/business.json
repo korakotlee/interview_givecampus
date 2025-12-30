@@ -1,0 +1,76 @@
+{
+  "name": "GiveCampus",
+  "overview": "GiveCampus is a comprehensive fundraising platform built exclusively for nonprofit educational institutions. It provides solutions for online giving, event management, and volunteer management, helping schools raise more dollars from more donors with less effort through best-in-class technology.",
+  "websiteUrl": "https://go.givecampus.com/",
+  "brandValues": ["Lead with curiosity and empathy", "Lift up those around you", "Be part of the solution", "Dare mighty things", "Make something people want"],
+  "visualAesthetics": ["institutional trust", "clean corporate", "human-centric", "professional", "aspirational"],
+  "toneOfVoice": ["Professional", "Mission-driven", "Expert/Authoritative", "Supportive"],
+  "fonts": ["heebo"],
+  "campaigns": [{
+    "creatives": [{
+      "title": "Simplify Your Giving Day Strategy",
+      "versions": [{
+        "fileName": "resource_8N9n0t-Pjmd8IMCBcGfO9K.png"
+      }]
+    }, {
+      "title": "Step 1: Unify Your Tools",
+      "versions": [{
+        "fileName": "resource_8tYKxP_kB2Be7G9UbEk_Yt.png"
+      }]
+    }, {
+      "title": "Step 2: Automate Engagement",
+      "versions": [{
+        "fileName": "resource_8qgLNEXKwVldQxbYtfz4Ve.png"
+      }]
+    }, {
+      "title": "Step 3: Track Real-Time Results",
+      "versions": [{
+        "fileName": "resource_aSFtiynEui6buNmxhWX_8Z.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "Stop Juggling Giving Day Forms",
+      "versions": [{
+        "fileName": "resource_85SFyGQBjBwb-aAFT0wOUm.png"
+      }]
+    }, {
+      "title": "Feature 1: Simple Registration",
+      "versions": [{
+        "fileName": "resource_9qOynMWEbeH5N7JIhg3_Uw.png"
+      }]
+    }, {
+      "title": "Feature 2: Live Donor Metrics",
+      "versions": [{
+        "fileName": "resource_8t5waJvvJ72cYDmgfZp4NS.png"
+      }]
+    }, {
+      "title": "3 Features, One Platform",
+      "versions": [{
+        "fileName": "resource_b6onvvmhCFO2WCjW4v__n3.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "Simplify Your Donor Cycle",
+      "versions": [{
+        "fileName": "resource_bX3uu09EInB9Vti1XW2_cX.png"
+      }]
+    }, {
+      "title": "Online Giving Made Easy",
+      "versions": [{
+        "fileName": "resource_9xEiNg8hiH69GFDLGJtOWF.png"
+      }]
+    }, {
+      "title": "Events \u0026 Appeals, Unified",
+      "versions": [{
+        "fileName": "resource_8sgHjV1IIT04I8av3mQOAS.png"
+      }]
+    }, {
+      "title": "Data-Driven Stewardship",
+      "versions": [{
+        "fileName": "resource_bq9vlo1q-mje7jtUcBeOjg.png"
+      }]
+    }]
+  }]
+}
