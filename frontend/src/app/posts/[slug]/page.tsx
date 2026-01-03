@@ -9,8 +9,8 @@ import { useGclQuery } from "@/components/GclProvider";
 import DeleteModal from "@/components/DeleteModal";
 
 const DELETE_POST_MUTATION = `
-  mutation DeletePost($id: ID!) {
-    deletePost(id: $id) {
+  mutation DeletePost($input: DeletePostInput!) {
+    deletePost(input: $input) {
       success
       errors
     }
@@ -154,7 +154,7 @@ export default function PostPage() {
     setIsDeleting(true);
     setIsDeleteModalOpen(false);
     try {
-      const result = await query(DELETE_POST_MUTATION, { id: post.id });
+      const result = await query(DELETE_POST_MUTATION, { input: { id: post.id } });
       if (result.deletePost.success) {
         router.push("/");
         router.refresh();
