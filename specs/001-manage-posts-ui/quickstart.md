@@ -4,7 +4,7 @@
 
 1. **Backend**:
    - Ensure the server is running: `cd backend && bin/rails s -p 3001`
-   - Run tests: `cd backend && bundle exec rspec` (if RSpec matches your setup)
+   - Run tests: `cd backend && bundle exec rspec`
 
 2. **Frontend**:
    - Ensure the dev server is running: `cd frontend && npm run dev`
@@ -23,3 +23,15 @@
 - **Create**: Fill form -> Submit -> Check list.
 - **Edit**: Click edit -> Update title -> Save -> Check list.
 - **Delete**: Click delete -> Confirm modal -> Check list.
+
+## Running Automated Tests
+- **Backend (RSpec)**:
+  ```bash
+  cd backend
+  bundle exec rspec
+  ```
+- **Frontend (Vitest)**:
+  ```bash
+  cd frontend
+  npm test
+  ```
