@@ -27,9 +27,9 @@ description: "Task list for Manage Posts UI implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T000 Search codebase for existing similar form components or GraphQL mutation patterns
-- [ ] T001 [P] Ensure `backend` and `frontend` dev servers are configured for local development
-- [ ] T002 [P] Verify `frontend/src/components/GclProvider.tsx` supports mutation calls as planned
+- [X] T000 Search codebase for existing similar form components or GraphQL mutation patterns
+- [X] T001 [P] Ensure `backend` and `frontend` dev servers are configured for local development
+- [X] T002 [P] Verify `frontend/src/components/GclProvider.tsx` supports mutation calls as planned
 
 ---
 
@@ -39,10 +39,10 @@ description: "Task list for Manage Posts UI implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T003 Implement slug generation logic in `backend/app/models/post.rb` using `ActiveSupport::Inflector#parameterize`
-- [ ] T004 Add uniqueness validation for `slug` in `backend/app/models/post.rb`
-- [ ] T005 [P] Create `BaseMutation` if not present in `backend/app/graphql/mutations/base_mutation.rb`
-- [ ] T006 [P] Update `Author` model validations in `backend/app/models/author.rb` to ensure name presence
+- [X] T003 Implement slug generation logic in `backend/app/models/post.rb` using `ActiveSupport::Inflector#parameterize`
+- [X] T004 Add uniqueness validation for `slug` in `backend/app/models/post.rb`
+- [X] T005 [P] Create `BaseMutation` if not present in `backend/app/graphql/mutations/base_mutation.rb`
+- [X] T006 [P] Update `Author` model validations in `backend/app/models/author.rb` to ensure name presence
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -56,12 +56,12 @@ description: "Task list for Manage Posts UI implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T007 [P] [US1] Create `CreatePost` mutation class in `backend/app/graphql/mutations/create_post.rb`
-- [ ] T008 [US1] Implement `Author.find_or_create_by(name: author_name)` logic in `CreatePost` mutation resolver
-- [ ] T009 [P] [US1] Register `create_post` field in `backend/app/graphql/types/mutation_type.rb`
-- [ ] T010 [P] [US1] Create modular `PostForm.tsx` component in `frontend/src/components/PostForm.tsx` using Tailwind CSS
-- [ ] T011 [US1] Implement Create Post page at `frontend/src/app/posts/new/page.tsx` using `PostForm`
-- [ ] T012 [US1] Add success toast notification and redirection logic after successful creation in `frontend/src/app/posts/new/page.tsx`
+- [X] T007 [P] [US1] Create `CreatePost` mutation class in `backend/app/graphql/mutations/create_post.rb`
+- [X] T008 [US1] Implement `Author.find_or_create_by(name: author_name)` logic in `CreatePost` mutation resolver
+- [X] T009 [P] [US1] Register `create_post` field in `backend/app/graphql/types/mutation_type.rb`
+- [X] T010 [P] [US1] Create modular `PostForm.tsx` component in `frontend/src/components/PostForm.tsx` using Tailwind CSS
+- [X] T011 [US1] Implement Create Post page at `frontend/src/app/posts/new/page.tsx` using `PostForm`
+- [X] T012 [US1] Add success toast notification and redirection logic after successful creation in `frontend/src/app/posts/new/page.tsx`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
