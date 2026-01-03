@@ -33,6 +33,7 @@ export default function PostPage() {
         post(slug: $slug) {
           id
           title
+          slug
           content
           category
           publishedAt

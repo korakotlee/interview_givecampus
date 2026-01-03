@@ -66,12 +66,10 @@ export default function EditPostPage() {
         if (data && data.post) {
           setPost(data.post);
         } else {
-          console.error("Post not found for slug:", slugStr, "Data:", data);
-          setErrors([`Post not found for slug: "${slugStr}". Data: ${JSON.stringify(data)}`]);
+          setErrors(["Post not found"]);
         }
       })
       .catch((err: any) => {
-        console.error("Query error:", err);
         setErrors([err.message]);
       })
       .finally(() => setLoading(false));
@@ -152,8 +150,7 @@ export default function EditPostPage() {
           />
         ) : (
           <div className="text-center p-12 bg-red-50 dark:bg-red-900/20 rounded-2xl border border-red-200 dark:border-red-800">
-            <h2 className="text-xl font-bold text-red-600 dark:text-red-400 mb-2">Post Not Found</h2>
-            <p className="text-sm text-zinc-500 mb-6">Slug identifier: "{slug}"</p>
+            <h2 className="text-xl font-bold text-red-600 dark:text-red-400 mb-4">Post Not Found</h2>
             <button onClick={() => router.push("/")} className="text-blue-600 hover:underline">Return to feed</button>
           </div>
         )}
