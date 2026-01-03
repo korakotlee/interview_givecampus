@@ -31,6 +31,7 @@ module Types
     end
 
     def post(slug:)
+      Rails.logger.info "Querying post with slug: #{slug}"
       Post.find_by(slug: slug)
     end
   end

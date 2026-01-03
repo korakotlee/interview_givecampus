@@ -11,9 +11,13 @@
    - Navigate to `http://localhost:3000/posts/new` to create your first post.
 
 ## Key Files
-- Backend Mutation: `backend/app/graphql/mutations/create_post.rb`
-- Frontend Page: `frontend/src/app/posts/new/page.tsx`
-- Shared Component: `frontend/src/components/PostForm.tsx`
+- Backend Mutations: `backend/app/graphql/mutations/*.rb`
+- Frontend Pages:
+  - Create: `frontend/src/app/posts/new/page.tsx`
+  - Edit: `frontend/src/app/posts/[slug]/edit/page.tsx`
+- Shared Components:
+  - `frontend/src/components/PostForm.tsx`
+  - `frontend/src/components/DeleteModal.tsx`
 
 ## Testing the Flow
 - **Create**: Fill form -> Submit -> Check list.

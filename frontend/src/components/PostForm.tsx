@@ -24,6 +24,10 @@ export default function PostForm({ initialData, onSubmit, isSubmitting, errors =
     authorName: ""
   });
 
+  const getFieldError = (fieldName: string) => {
+    return errors.find(err => err.toLowerCase().includes(fieldName.toLowerCase()));
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -43,16 +47,6 @@ export default function PostForm({ initialData, onSubmit, isSubmitting, errors =
         <p className="text-zinc-500 dark:text-zinc-400">Share your thoughts with the community.</p>
       </div>
 
-      {errors.length > 0 && (
-        <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-          <ul className="list-disc list-inside text-sm text-red-600 dark:text-red-400">
-            {errors.map((error, i) => (
-              <li key={i}>{error}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       <div className="space-y-4">
         <div className="group">
           <label htmlFor="title" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1 transition-colors group-focus-within:text-blue-600">
@@ -65,9 +59,12 @@ export default function PostForm({ initialData, onSubmit, isSubmitting, errors =
             value={formData.title}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+            className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border ${getFieldError('title') ? 'border-red-500' : 'border-zinc-200 dark:border-zinc-700'} rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none`}
             placeholder="What's on your mind?"
           />
+          {getFieldError('title') && (
+            <p className="mt-1 text-xs text-red-500 font-medium">{getFieldError('title')}</p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -82,9 +79,12 @@ export default function PostForm({ initialData, onSubmit, isSubmitting, errors =
               value={formData.authorName}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+              className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border ${getFieldError('author') ? 'border-red-500' : 'border-zinc-200 dark:border-zinc-700'} rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none`}
               placeholder="Your name"
             />
+            {getFieldError('author') && (
+              <p className="mt-1 text-xs text-red-500 font-medium">{getFieldError('author')}</p>
+            )}
           </div>
 
           <div className="group">
@@ -114,9 +114,12 @@ export default function PostForm({ initialData, onSubmit, isSubmitting, errors =
             onChange={handleChange}
             required
             rows={8}
-            className="w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none"
+            className={`w-full px-4 py-3 bg-zinc-50 dark:bg-zinc-800 border ${getFieldError('content') ? 'border-red-500' : 'border-zinc-200 dark:border-zinc-700'} rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none`}
             placeholder="Write your story here..."
           />
+          {getFieldError('content') && (
+            <p className="mt-1 text-xs text-red-500 font-medium">{getFieldError('content')}</p>
+          )}
         </div>
       </div>
 

@@ -54,11 +54,16 @@ export default function BlogList() {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
-          whileHover={{ y: -10, rotate: index % 2 === 0 ? 1 : -1 }}
-          className="group"
+          whileHover={{ y: -10 }}
+          className="group relative"
         >
+          <Link href={`/posts/${post.slug}/edit`} className="absolute top-4 right-4 z-10 p-2 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-full border border-zinc-200 dark:border-zinc-800 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-600 hover:text-white cursor-pointer" title="Edit Story">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+          </Link>
           <Link href={`/posts/${post.slug}`} className="block h-full">
-            <div className="glass-card h-full p-8 flex flex-col justify-between hover:border-accent/40">
+            <div className="glass-card h-full p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
               <div>
                 <span className="bg-primary text-white text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full">
                   {post.category}

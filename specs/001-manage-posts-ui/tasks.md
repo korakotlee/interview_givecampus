@@ -75,11 +75,11 @@ description: "Task list for Manage Posts UI implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T013 [P] [US2] Create `UpdatePost` mutation class in `backend/app/graphql/mutations/update_post.rb`
-- [ ] T014 [P] [US2] Register `update_post` field in `backend/app/graphql/types/mutation_type.rb`
-- [ ] T015 [P] [US2] Implement Edit Post page at `frontend/src/app/posts/[slug]/edit/page.tsx`
-- [ ] T016 [US2] Fetch existing post data by slug and populate `PostForm` in `frontend/src/app/posts/[slug]/edit/page.tsx`
-- [ ] T017 [US2] Handle update submission and display feedback in `frontend/src/app/posts/[slug]/edit/page.tsx`
+- [X] T013 [P] [US2] Create `UpdatePost` mutation class in `backend/app/graphql/mutations/update_post.rb`
+- [X] T014 [P] [US2] Register `update_post` field in `backend/app/graphql/types/mutation_type.rb`
+- [X] T015 [P] [US2] Implement Edit Post page at `frontend/src/app/posts/[slug]/edit/page.tsx`
+- [X] T016 [US2] Fetch existing post data by slug and populate `PostForm` in `frontend/src/app/posts/[slug]/edit/page.tsx`
+- [X] T017 [US2] Handle update submission and display feedback in `frontend/src/app/posts/[slug]/edit/page.tsx`
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -93,10 +93,10 @@ description: "Task list for Manage Posts UI implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T018 [P] [US3] Create `DeletePost` mutation class in `backend/app/graphql/mutations/delete_post.rb`
-- [ ] T019 [P] [US3] Register `delete_post` field in `backend/app/graphql/types/mutation_type.rb`
-- [ ] T020 [P] [US3] Create `DeleteModal.tsx` confirmation component in `frontend/src/components/DeleteModal.tsx`
-- [ ] T021 [US3] Integrate `DeleteModal` into the post list or post card component (e.g., `frontend/src/components/BlogList.tsx`)
+- [X] T018 [P] [US3] Create `DeletePost` mutation class in `backend/app/graphql/mutations/delete_post.rb`
+- [X] T019 [P] [US3] Register `delete_post` field in `backend/app/graphql/types/mutation_type.rb`
+- [X] T020 [P] [US3] Create `DeleteModal.tsx` confirmation component in `frontend/src/components/DeleteModal.tsx`
+- [X] T021 [US3] Integrate `DeleteModal` into the post list or post card component (e.g., `frontend/src/components/BlogList.tsx`)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -106,10 +106,10 @@ description: "Task list for Manage Posts UI implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T022 [P] Implement inline error message display for all fields in `frontend/src/components/PostForm.tsx`
-- [ ] T023 [P] Update `specs/001-manage-posts-ui/quickstart.md` with any actual usage details discovered during implementation
-- [ ] T024 Perform final validation of SC-001 through SC-004 from `spec.md`
-- [ ] T025 Run `backend` and `frontend` tests to ensure no regressions
+- [X] T022 [P] Implement inline error message display for all fields in `frontend/src/components/PostForm.tsx`
+- [X] T023 [P] Update `specs/001-manage-posts-ui/quickstart.md` with any actual usage details discovered during implementation
+- [X] T024 Perform final validation of SC-001 through SC-004 from `spec.md`
+- [X] T025 Run `backend` and `frontend` tests to ensure no regressions
 
 ---
 
