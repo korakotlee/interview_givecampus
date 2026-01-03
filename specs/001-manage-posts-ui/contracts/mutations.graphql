@@ -1,0 +1,53 @@
+# GraphQL Mutations for Post Management
+
+## Create Post
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    post {
+      id
+      title
+      slug
+      content
+      author {
+        name
+      }
+    }
+    errors
+  }
+}
+
+## Update Post
+mutation UpdatePost($input: UpdatePostInput!) {
+  updatePost(input: $input) {
+    post {
+      id
+      title
+      content
+    }
+    errors
+  }
+}
+
+## Delete Post
+mutation DeletePost($id: ID!) {
+  deletePost(id: $id) {
+    id
+    success
+    errors
+  }
+}
+
+## Input Types (Conceptual)
+input CreatePostInput {
+  title: String!
+  content: String!
+  category: String
+  authorName: String!
+}
+
+input UpdatePostInput {
+  id: ID!
+  title: String
+  content: String
+  category: String
+}
